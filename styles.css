@@ -1,0 +1,150 @@
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background-background-color);
+    margin: auto;
+    max-width: 675px;
+}
+
+:root {
+    --background-background-color: #DBF2A5;
+    --page-background-color: #e6dfa7;
+    --card-background-color: #F2DAA5;
+}
+
+/* HEADER ELEMENTS */
+
+#pictureOfMeContainer {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+h1{
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+#personalInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 70%;
+}
+
+#personalInfo p {
+    text-align: right;
+    line-height: 1.5rem;
+}
+
+#titleBox {
+    background-color: var(--page-background-color);
+    padding: 10px;
+    box-shadow: 0 .3125rem 0.35rem #555577;
+    min-width: 250px;
+    max-width: 655px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+@media (max-width: 610px){
+    #titleBox {
+        flex-direction: column;
+    }
+
+    #personalInfo footer {
+        justify-content: center;
+    }
+
+    #personalInfo p, h1 {
+        text-align: center;
+    }
+}
+
+/* MAIN BODY */
+
+article {
+    background-color: var(--page-background-color);
+    box-sizing: border-box;
+    margin-top: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-shadow: 0 .3125rem 0.35rem #555577;
+}
+
+article p{
+    text-align: justify;
+}
+
+article p a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+@media (max-width: 610px){
+    article {
+        align-items: center;
+    }
+
+    article * {
+        text-align: center;
+    }
+}
+
+/* CARD LIST */
+
+.projectsList {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0.6rem;
+    row-gap: 0.6rem;
+}
+@media (max-width: 610px){
+    .projectsList {
+        justify-content: center;
+    }
+}
+
+.projectCard {
+    width: 8rem;
+    height: 11.25rem;
+    background-color: var(--card-background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #555555;
+    justify-content: space-between;
+    margin: 0;
+    overflow: hidden;
+    box-sizing: content-box;
+    padding: .25rem;
+    border-radius: 4px;
+    filter: drop-shadow(0 0 0.15rem #555577);
+    transition: filter 0.75s;
+}
+.projectImage {
+    width: 5.5rem;
+    object-fit: contain;
+}
+.projectDescription, .projectTitle {
+    text-align: center;
+}
+.projectsList a {
+    text-decoration: none;
+}
+.projectCard:hover {/*seletor de uma pseudo classe (:hover seleciona um elemento quando o mouse está passando sobre ele)*/
+    filter: drop-shadow(0 0 0.5rem #555577);
+    transition: filter 0.75s;
+}
+
